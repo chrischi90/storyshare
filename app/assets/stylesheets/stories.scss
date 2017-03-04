@@ -1,3 +1,27 @@
 // Place all the styles related to the stories controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+/*** STORY CARD ****/
+
+.story-card {
+  padding: 10px 20px 30px;
+  // border-bottom: solid 1px #083045;
+  transition: 0.5s;
+
+  .story-card-title {
+    font-size: 0.75em;
+    color: #083045;
+  }
+}
+
+.story-card:hover {
+    background-color: #FFF;
+}
+
+.author {
+  font-size: 0.5em;
+}
+
+

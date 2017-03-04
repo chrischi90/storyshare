@@ -1,12 +1,11 @@
 <% @stories.order(:cached_votes_score).reverse.each do |story| %>
-  <div class="">
+  <div class="story-card">
     <h2>
-      <%= link_to story.title, story %><br>
+      <%= link_to story.title, story, class: "story-card-title"%><br>
       <small class="author">Submitted <%= time_ago_in_words(story.created_at) %> by <%= story.user.try!(:name) %></small>
     </h2>
 
     <div class="btn-group">
-      <%= link_to 'Read Story', story, class: "btn btn-default btn-sm" %>
       <%= link_to like_story_path(story), method: :put, class: "btn btn-default btn-sm" do %>
         <span class="glyphicon glyphicon-chevron-up"></span>
         Upvote
@@ -17,6 +16,7 @@
         Downvote
         <%= story.get_downvotes.size %>
       <% end %>
+      <%= link_to "#{story.comments.count} Comments", story, class: "btn btn-default btn-sm" %>
     </div>
   </div>
 <% end %>
