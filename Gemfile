@@ -56,4 +56,4 @@ gem 'aws-sdk'
 gem 'bootstrap-sass', '3.3.7'
 gem 'acts_as_votable', '~> 0.10.0'
 gem 'simple_form'
-gem 'ckeditor', git: "git@github.com:galetahub/ckeditor.git"
+gem 'ckeditor', github: 'galetahub/ckeditor'
