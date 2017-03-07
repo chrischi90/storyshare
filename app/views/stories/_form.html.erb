@@ -1,3 +1,11 @@
+<script type='text/javascript' charset='UTF-8'>
+  $(document).ready(function(){
+    $('.ckeditor').ckeditor({
+      // optional config
+    });
+  });
+</script>
+
 <%= form_for(@story) do |f| %>
   <% if @story.errors.any? %>
     <div id="error_explanation">
